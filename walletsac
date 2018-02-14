@@ -1,0 +1,13 @@
+import pywaves as pw
+
+myAddress = pw.Address(privateKey='Getma8W3tXvLqb27YNv2MwprhaUDehoXD2QSp9fNvB26')
+
+# send Waves to another address
+myAddress.sendWaves(recipient = pw.Address('3PPetRccRL4shab43BAxi6MmufFGEfGV49a'),
+                    amount = 8)
+
+# send asset to another address
+myToken = pw.Asset('Getma8W3tXvLqb27YNv2MwprhaUDehoXD2QSp9fNvB26')
+myAddress.sendAsset(recipient = pw.Address('3PPetRccRL4shab43BAxi6MmufFGEfGV49a'),
+                    asset = myToken,
+                    amount = 300)
